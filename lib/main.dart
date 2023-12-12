@@ -1,8 +1,8 @@
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:networking/currency_dropdown.dart';
-import 'weather.dart'; // Импортируйте новый файл
-import 'joke.dart'; // Импортируйте новый файл
+import 'weather.dart';
+import 'joke.dart';
 
 void main() {
   runApp(NetworkingApp());

@@ -55,7 +55,7 @@ class _WeatherPageState extends State<WeatherPage> {
     if (permission == LocationPermission.denied ||
         permission == LocationPermission.deniedForever) {
       // Пользователь отклонил запрос, обрабатываем ситуацию
-      // Можете вывести сообщение или предоставить какие-то альтернативные варианты
+      // выводим сообщение
     } else {
       // Разрешение получено, обновляем данные о погоде
       await _getCurrentLocationWeather();
@@ -70,7 +70,7 @@ class _WeatherPageState extends State<WeatherPage> {
           longitude: longitude,
         );
         if (weatherData == null) {
-          print('No weather data available for the current location');
+          print('Данные о погоде для текущего местоположения недоступны');
         } else {
           setState(() {
             city = weatherData[
@@ -78,7 +78,7 @@ class _WeatherPageState extends State<WeatherPage> {
           });
         }
       } catch (error) {
-        print('Error updating weather data: $error');
+        print('Ошибка при обновлении погодных данных: $error');
       }
     }
   }
@@ -116,8 +116,6 @@ class _WeatherPageState extends State<WeatherPage> {
       return null; // Возвращаем null в случае других ошибок
     }
   }
-
-  // ... Остальной код остается неизменным
 
   @override
   Widget build(BuildContext context) {
