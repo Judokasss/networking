@@ -29,7 +29,6 @@ class _JokePageState extends State<JokePage> {
           String imageUrl = data['message'];
 
           if (imageUrl.isNotEmpty && imageUrl.startsWith('http')) {
-            // Extract breed name from the image URL
             List<String> urlParts = imageUrl.split('/');
             String breedName = urlParts[urlParts.length - 2];
             breedName = breedName.replaceAll('-', ' ');
